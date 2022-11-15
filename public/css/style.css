@@ -1,0 +1,40 @@
+.create {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.back {
+    left: 20px;
+    top: 20px;
+}
+
+.left-icon {
+    height: 38px;
+}
+
+.plus {
+    height: 38px;
+}
+
+/* responsive in tablet */
+@media (max-width: 767.98px) {
+    body {
+        margin-bottom: 300px;
+    }
+
+    footer {
+        height: 300px;
+    }
+}
+
+/* responsive in handphone */
+@media (max-width: 575.98px) {
+    body {
+        margin-bottom: 450px;
+    }
+
+    footer {
+        height: 450px;
+    }
+}
