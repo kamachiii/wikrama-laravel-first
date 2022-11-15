@@ -18,8 +18,11 @@
         <td>{{ $data->created_at }}</td>
         {{-- <td></td> --}}
         <td>
-            <a class="btn btn-primary" href="{{ route('edit', $data->id) }}">Edit</a>
-            <a class="btn btn-danger" href="">Delete</a>
+            <form action="{{ route('delete', $data->id) }}" method="post">
+                @csrf
+                <a class="btn btn-primary" href="{{ route('edit', $data->id) }}">Edit</a>
+                <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
         </td>
     </tr>
     @endforeach

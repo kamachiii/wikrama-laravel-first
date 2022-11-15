@@ -22,10 +22,10 @@
 
 
   {{-- Tombol Plus Create --}}
-<div class="create">
-  <a href="{{ route('create') }}">
-      <img class="plus" src="img/plus.svg">
-  </a>
+  <div class="create">
+    <a href="{{ route('create') }}">
+        <img class="plus" src="img/plus.svg">
+    </a>
   </div>
 
   @else

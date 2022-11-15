@@ -72,16 +72,18 @@ class HelloController extends Controller
             'name_activity' => $request->name_activity,
         ]);
 
-        return redirect()->route('index')
+        return redirect()->route('history')
                         ->with('update', 'Update Successfully!');
     }
 
-    public function destroy(Activity $data)
+    public function delete($id)
     {
-        $data->delete();
+        Activity::where('id', $id)->delete();
 
-        return redirect()->route('index')
-                        ->with('delete','Berhasil Hapus !');
+        return redirect()->route('history')
+                        ->with('delete', 'Delete Successfully!');
     }
+
+
 
 }

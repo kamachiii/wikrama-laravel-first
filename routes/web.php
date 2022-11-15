@@ -32,5 +32,4 @@ Route::post('/storeActivity', [HelloController::class, 'storeActivity'])->name('
 
 Route::post('/update/{id}', [HelloController::class, 'update'])->name('update');
 
-Route::post('/destroy', [HelloController::class, 'destroy'])->name('destroy');
-
+Route::post('/delete/{id}', [HelloController::class, 'delete'])->name('delete');
