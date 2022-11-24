@@ -18,7 +18,7 @@
         <td>{{ $data->created_at }}</td>
         {{-- <td></td> --}}
         <td>
-            <form action="{{ route('delete', $data->id) }}" method="post">
+            <form action="{{ route('destroy', $data->id) }}" method="post">
                 @csrf
                 <a class="btn btn-primary" href="{{ route('edit', $data->id) }}">Edit</a>
                 <button class="btn btn-danger" type="submit">Delete</button>

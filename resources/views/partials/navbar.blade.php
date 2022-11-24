@@ -1,4 +1,4 @@
-@if ($title != 'Create' && $title != 'Edit')
+@if ($title != 'Create' && $title != 'Edit' && $title != 'Register' && $title != 'Login')
 
 {{-- Navbar --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -23,12 +23,12 @@
 
   {{-- Tombol Plus Create --}}
   <div class="create">
-    <a href="{{ route('create') }}">
+    <a href="{{ back() }}">
         <img class="plus" src="img/plus.svg">
     </a>
   </div>
 
-  @else
+  @elseif($title == 'Create' || $title == 'Edit')
 
   <div class="back mb-3">
     <a href="{{ route('index') }}"><img src="img/left.svg" class="left-icon"></a>

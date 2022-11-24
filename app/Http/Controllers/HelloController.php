@@ -52,7 +52,7 @@ class HelloController extends Controller
 
         Activity::create($request->all());
 
-        return redirect('/')
+        return redirect(route('history'))
             ->with('success','Create Activity Successfully!');
     }
 
@@ -76,10 +76,9 @@ class HelloController extends Controller
                         ->with('update', 'Update Successfully!');
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         Activity::where('id', $id)->delete();
-
         return redirect()->route('history')
                         ->with('delete', 'Delete Successfully!');
     }

@@ -2,20 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
-use App\Models\Activity;
-use Illuminate\Http\Request;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
+//? Halaman register
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/registerStore', [RegisterController::class, 'store'])->name('registerStore');
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// ? Halaman Login
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/loginStore', [LoginController::class, 'store'])->name('loginStore');
+
+//? Halaman Dashboard dll
 Route::get('/', [HelloController::class, 'index'])->name('index');
 
 Route::get('/history', [HelloController::class, 'history'])->name('history');
@@ -32,4 +30,5 @@ Route::post('/storeActivity', [HelloController::class, 'storeActivity'])->name('
 
 Route::post('/update/{id}', [HelloController::class, 'update'])->name('update');
 
-Route::post('/delete/{id}', [HelloController::class, 'delete'])->name('delete');
+Route::post('/destroy/{id}', [HelloController::class, 'destroy'])->name('destroy');
+
