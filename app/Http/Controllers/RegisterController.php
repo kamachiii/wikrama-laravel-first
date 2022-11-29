@@ -25,7 +25,7 @@ class RegisterController extends Controller
         User::create($validateData);
 
         return redirect(route('register'))
-        ->with('success','Registrasi berhasil, silahkan Login!');
+        ->with('regSuccess','Registrasi berhasil, silahkan Login!');
 
     }
 }

@@ -3,15 +3,15 @@
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 {{-- Jika kita berhasil melakukan registrasi alert ini akan muncul , alert ini diatur didalam RegisterController --}}
-                @if (session('success'))
+                @if (session('regSuccess'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session ('success') }}
+                        {{ session('regSuccess') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
                 <div class="container">
                     <main class="form-register">
-                        <form action="/register" method="POST">
+                        <form action="{{ route('registerStore') }}" method="POST">
                            @csrf
                             <h1 class="h3 mb-3 fw-normal">Register</h1>
 
